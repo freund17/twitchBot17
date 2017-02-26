@@ -1,0 +1,198 @@
+- Composing der Ebenen im Bot
+- Events
+    - Module können Events auslösen
+    - Events können Commands aufrufen
+- Multiwährung
+    - Währung generiert man
+        - alle X Minuten Y Einheiten
+        - Faktor pro Spendenmenge
+        - für Follow
+        - für Subscription
+        - für Cheers
+        - für Teilnahme an Raids
+    - diminishing returns
+- Experience
+    - generiert wie Währung
+    - Grundlage für Titel
+- Titel
+    - z. B. "Schlächter"
+    - multititel?
+        - "Lord von Aachen"
+    - multiexperience?
+    - Ausgabe bei Titelaufstieg
+    - Titel haben Farbe
+    - Events
+        - bei Titelaufstieg
+- Userliste
+    - Statistiken
+    - Filter
+    - Sortieren
+    - Löschen
+    - Command-Silence ("Prison?")
+    - erster Besuch
+    - Aktivitätsprotokoll
+- Raids
+- Ränge
+    - Streamer
+    - Moderator
+    - Subscriber
+    - Follower
+    - Everyone
+    - Ränge haben Icons
+    - Events
+        - bei Subscription
+        - bei Follow
+- Chat
+    - Nachrichten anzeigen
+        - Smilies von Twitch und BetterTwitchTv (auch Channel-eigene)
+    - Chatnachrichten senden
+    - Filter (ausblenden / highlighten, verschiedene Farben)
+        - z. B. Nur Nachrichten mit @cobowled
+        - keine Nachrichten vom Bot anzeigen
+        - Nachrichten von Giveaway-Gewinner
+        - bestimmte Spieler
+        - bestimmte Ränge / Titel
+    - Anzahl Chat-Nachrichten
+    - Als verschiedene Nutzer in den Chat schreiben können (auswahl; z. B. Bot oder Streamer)
+- Preview von laufendem Twitch-Stream
+- Commands
+    - eigenes Command-Zeichen
+    - mit @name [Zahl] Punkte vergeben
+    - Globaler CD
+    - User CD
+    - give CMD
+    - benötigt Mindestrang / -titel
+    - akzeptiert über
+        - Channel Chat
+        - Whisper
+        - Beides
+    - Kosten (Multiwährung)
+    - Triggert
+        - triggert ein Script
+        - einen zufälligen Effekt aus einer Liste
+    - Help-Command listet verfügbare Commands mit Beschreibung und Preisen
+    - Warnung über Whisper ab bestimmten Preisen
+- Timer
+    - In regelmäßigen Intervallen etwas schreiben
+    - oder einen Command auslösen
+    - Timer sollten deaktivierbar sein
+    - min. X nicht-bot Nachrichten
+- Shotcuts / MiDi / Remote (Smartphone)
+    - Triggert commands
+- Effekte
+    - Werden durch Command / Timer aufgerufen
+    - lokale Resourcen (für z. B. 4k Videos) ermöglichen
+    - gibt Medien auf einem Layer wieder
+        - Audio
+            - Anzahl Wiederholungen
+            - Bereich
+            - Fade In / Out
+        - Video
+            - Position
+            - Anzahl Wiederholungen
+            - Bereich
+            - Fade In / Out
+            - Fade-Animationen
+        - Image
+            - Position
+            - Anzeigedauer
+            - Fade In / Out
+            - Fade-Animationen
+        - Text
+            - Position
+            - Anzeigedauer
+            - Schriftart
+            - Schriftgröße
+            - Farbe
+            - Fade In / Out
+            - Fade-Animationen
+        - Hintergrund
+        - Transparenz
+        - Vorschau-Funktion
+            - Cancel
+            - in speziellem Vorschau-Layer
+- Protokoll
+    - für wichtige Ereignisse
+        - Giveaway gewinner
+        - neue Subscriber
+        - donations
+- Giveaway
+    - Keyword zu Teilnahme
+    - Automatische Ausgabe von Random-Steamkeys
+    - Streamer über den Gewinner benachrichten
+    - verzögertes Verkündigen des Gewinners im Chat
+    - Teilnahmebeschränkung (durch Commands?)
+    - Kosten (durch Commands?)
+    - Sieger des Giveaway für X sec vom Einschreiben in Giveaways ausschließen
+    - "Luck Multiplier" für verschiedene Ränge / Titel
+    - Visuelles Feedback (wie Effekte)
+        - für verbleibende Zeit
+        - Sieger
+    - Events
+        - onStart
+        - onStop
+    - Commands / Buttons zum
+        - Starten des Einschreibens
+        - Beenden des Einschreibens
+        - Zurücksetzen des Giveaways
+        - Ziehen des Siegers
+    - Automatisches ziehen des Siegers
+    - Anzeige der (Anzahl der) Teilnehmer
+        - Alphabetisch sortieren
+        - Nach Rang / Titel einfärben
+- Musik
+    - unterstüzte Player
+        - YouTube
+        - Deezer
+        - Direktlinks
+    - Songrequests
+        - Ausschnitt mit angeben
+        - maximale Länge des Songs beschränken
+        - bei überschreiten der Länge
+            - Anfrage zurückweisen
+            - nach maximaler Länge ausblenden
+    - default Playlist
+    - Permissions (durch Commands?)
+    - Kosten (durch Commands?)
+    - Basislautstärke für verschiedene Quellen angeben
+    - Blacklist Titel / Interpret
+    - Songcover / Titel / Interpret (CurrentSong)
+        - Anzeigen auf Layer
+        - normalisieren von Albumcovermaßen
+    - Command
+        - Songrequest (que)
+        - Songrequest (definitiv nächstes)
+            - Schlägt fehl, wenn schon gesetzt
+        - Playlist ausgeben
+        - nächstes Lied
+- Gewinnspiele
+    - Slot-Machine
+    - Glücksrat
+    - Command
+        - starte Rad (für Spieler)
+        - starte Slot-Machine (für Spieler)
+    - Wie Giveaway
+        - Streamer benachrichtigen
+        - Spieler benachrichtigen
+        - ...
+- Zitate
+    - Zitiren von Streamer
+    - Commands
+        - Zitat anlegen
+        - Abfrage von Zitaten
+- Abschlussbericht
+    - wird in Log aufgenommen
+    - durchschnittliche Viewer
+    - erhaltene Spenden
+- Settings
+    - Account-Logins
+        - Chat-Twitch; Streamer / Bot
+        - Deezer?
+        - https://www.tipeeestream.com/
+    - Purge / Timeout / Ban
+        - Verwarnungen und ansteigende Strafe
+        - Großbuchstaben verbieten
+        - Blacklist an Wörtern
+        - Linkprotection
+        - unschöne Unicode-Zeichen
+- Schnelles aktualisieren der Viewerliste
