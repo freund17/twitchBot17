@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>234</y>
+      <w>153</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>MainClient
+-
+Manages behaviour
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>234</y>
+      <w>360</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>RemoteClient
+-
+lightweight control panel
+intended to be used in mobile devices to trigger commands
+is also beeing used as one screen in the MainClient
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>657</x>
+      <y>378</y>
+      <w>639</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>CentralizedServer
+-
+as the clients are webapps they are getting served and communicate via a central server
+this server is intended to be used for managing multiple users and syncing their settings over multiple devices
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>828</x>
+      <y>234</y>
+      <w>405</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>LayerClient
+-
+lightweight
+intended to be used as a layer in (for example) an OBS BrowserSource
+displays grafics and plays sounds
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>378</y>
+      <w>477</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>StandaloneServer
+-
+as the clients are webapps they are getting served and communicate via a server
+this server is intended to be used in a standalone way to manage a single user
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>324</x>
+      <y>234</y>
+      <w>126</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
